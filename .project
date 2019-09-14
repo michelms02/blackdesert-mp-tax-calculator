@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>blackdesert-calculator-for-mp-tax2</name>
-	<comment></comment>
-	<projects>
-	</projects>
-	<buildSpec>
-	</buildSpec>
-	<natures>
-	</natures>
+	<name>blackdesert-calculator-for-mp-tax</name>
+	<comment>added hierarchy and tui classes</comment>
+	<projects></projects>
+	<buildSpec></buildSpec>
+	<natures></natures>
 </projectDescription>
