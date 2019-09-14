@@ -1,4 +1,4 @@
-package bdo.calculator.marketplace;
+package bdo.calculator.marketplace.domain;
 
 public class Marketplace {
 

@@ -1,15 +1,9 @@
-package bdo.calculator.marketplace;
+package bdo.calculator.marketplace.tui;
 
-import java.util.Scanner;
+import bdo.calculator.marketplace.domain.Marketplace;
 import java.text.DecimalFormat;
 
-public class Calculator {
-
-	private static final Scanner sc = new Scanner(System.in);
-
-	public static void main(String[] args) {
-		menu();
-	}
+public class MarketplaceTUI {
 
 	public static void menu() {
 		Marketplace item = new Marketplace();
@@ -17,17 +11,15 @@ public class Calculator {
 		boolean vp;
 
 		// Gets user item value input
-		System.out.println("Insert the item value to calculate: ");
-		item.setValue(sc.nextDouble());
+		item.setValue(UtilTUI.getDecimal("Insert the item value to calculate: "));
 
 		// do/while until user's choice input is valid
 		do {
-			System.out.println("Do you have a Value Pack?\n" + "(1) Yes" + " (2) No");
-			choice = sc.nextInt();
-			if (choice != 1 && choice != 2) {
+			choice = UtilTUI.getNumber("Do you have a Value Pack?\n" + "(1) Yes" + " (2) No");
+			if (!hasValuePack(choice)) {
 				System.out.println("Incorrect option, please try again.\n");
 			}
-		} while (choice != 1 && choice != 2);
+		} while (!hasValuePack(choice));
 
 		// Calls the methods based on the choice
 		vp = choice == 1;
@@ -36,6 +28,7 @@ public class Calculator {
 
 	public static void doMath(Marketplace item, boolean vp) {
 		double result;
+		
 		if (vp) {
 			result = item.getTaxValuePack() * item.getValue();
 			toDecimal(result);
@@ -43,6 +36,10 @@ public class Calculator {
 			result = item.getTax() * item.getValue();
 			toDecimal(result);
 		}
+	}
+	
+	public static boolean hasValuePack(Integer choice) {
+		return choice == 1 || choice == 2;
 	}
 
 	// Converts the double format to decimal format
