@@ -26,6 +26,10 @@ public class MarketplaceTUI {
 		doMath(item, vp);
 	}
 
+	/**
+	 * Receives object item from marketplace and boolean result to run one of
+	 * the two operations.
+	 */
 	public static void doMath(Marketplace item, boolean vp) {
 		double result;
 		
@@ -38,11 +42,17 @@ public class MarketplaceTUI {
 		}
 	}
 	
+	/**
+	 * Checks if choice received by parameter in menu(); is equivalent 
+	 * to the boolean condition be true and break the loop
+	 */
 	public static boolean hasValuePack(Integer choice) {
 		return choice == 1 || choice == 2;
 	}
 
-	// Converts the double format to decimal format
+	/**
+	 * Converts the double format to decimal format
+	 */
 	public static void toDecimal(double result) {
 		DecimalFormat df = new DecimalFormat("#,###,###");
 		System.out.println("You'd get approximately " + df.format(result) + " (Silver) back from the Marketplace.");

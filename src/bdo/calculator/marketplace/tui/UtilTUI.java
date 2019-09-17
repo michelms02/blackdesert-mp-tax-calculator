@@ -44,6 +44,9 @@ public class UtilTUI {
 		return decimal;
 	}
 
+	/**
+	 * Incomplete attempt of making a name sort.
+	 */
 	public static String nameFormat(String text) {
 		char[] name = text.toLowerCase().trim().toCharArray();
 		char[] format = new char[name.length];
