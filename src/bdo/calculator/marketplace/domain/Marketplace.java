@@ -2,33 +2,32 @@ package bdo.calculator.marketplace.domain;
 
 public class Marketplace {
 
-	private float taxValuePack;
+	protected Double taxValuePack;
+	protected Double tax;
+	protected Double price;
 
-	private float tax;
-
-	private double value;
-
-	// tax value with value pack is approximately 84.5%
-	// tax value without value pack is approximately 65%
+	// tax value with value pack is 84.5%
+	// tax value without value pack is 65%
 	public Marketplace() {
 		super();
-		this.taxValuePack = 0.845f;
-		this.tax = 0.65f;
+		this.taxValuePack = 0.845d;
+		this.tax = 0.65d;
 	}
 
-	public float getTaxValuePack() {
+	public Double getTaxValuePack() {
 		return taxValuePack;
 	}
 
-	public float getTax() {
+	public Double getTax() {
 		return tax;
 	}
 
-	public double getValue() {
-		return value;
+	public Double getValue() {
+		return price;
 	}
 
-	public void setValue(double value) {
-		this.value = value;
+	public void setPrice(Double price) {
+		this.price = price;
 	}
+	
 }
