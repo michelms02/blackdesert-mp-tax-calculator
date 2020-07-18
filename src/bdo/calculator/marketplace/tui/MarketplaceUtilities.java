@@ -12,10 +12,10 @@ public class MarketplaceUtilities {
 	public static void doMath(Marketplace item, boolean vp) {
 		Double result;
 		if (vp) {
-			result = item.getTaxValuePack() * item.getValue();
+			result = item.getTaxValuePack() * item.getPrice();
 			toDecimal(result);
 		} else {
-			result = item.getTax() * item.getValue();
+			result = item.getTax() * item.getPrice();
 			toDecimal(result);
 		}
 	}
