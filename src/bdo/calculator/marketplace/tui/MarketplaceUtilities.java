@@ -31,7 +31,7 @@ public class MarketplaceUtilities {
 	/**
 	 * Converts the double format to decimal format
 	 */
-	public static void toDecimal(double result) {
+	public static void toDecimal(Double result) {
 		DecimalFormat df = new DecimalFormat("#,###,###");
 		System.out.println("You'd get approximately " + df.format(result) + " (Silver) back from the Marketplace.");
 	}
