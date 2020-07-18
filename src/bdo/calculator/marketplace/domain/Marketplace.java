@@ -22,7 +22,7 @@ public class Marketplace {
 		return tax;
 	}
 
-	public Double getValue() {
+	public Double getPrice() {
 		return price;
 	}
 
